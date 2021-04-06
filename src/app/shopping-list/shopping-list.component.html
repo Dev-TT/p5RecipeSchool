@@ -2,6 +2,10 @@
     <div class="col-xs-10">
         <app-shopping-edit></app-shopping-edit>
         <hr>
-        <p>The list</p>
+        <ul class="list-group">
+            <!-- href="#" is removed when we want the cursor pointer -->
+            <!-- ngFor directly instead of creating a dedicated component because this is simple and it does not have much business logic -->
+            <a class="list-group-item" style="cursor: pointer" *ngFor="let anIngredient of ingredients"> {{anIngredient.name}} ({{anIngredient.amount}})</a>
+        </ul>
     </div>
 </div>
